@@ -21,7 +21,6 @@ Platform.userExtensionDir.openOS;
 
 mkdir build
 cd build
-
 cmake -DSC_PATH=/Users/yota/supercollider/ ..
 cmake -DCMAKE_BUILD_TYPE=RELEASE ..
 // cmake -DSUPERNOVA=ON ..
