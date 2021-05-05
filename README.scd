@@ -17,11 +17,10 @@ Platform.userExtensionDir.openOS;
 // 4. recompile class library
 
 
-// ======= building from source =======
+// ======= build from source =======
 
 mkdir build
 cd build
-cmake -DSC_PATH=/Users/yota/supercollider/ ..
+cmake -DSC_PATH=/Users/yota/supercollider/ -DSUPERNOVA=ON ..
 cmake -DCMAKE_BUILD_TYPE=RELEASE ..
-// cmake -DSUPERNOVA=ON ..
 make
