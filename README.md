@@ -21,3 +21,6 @@ cmake -DSC_PATH=/Users/yota/supercollider/ -DSUPERNOVA=ON ..
 cmake -DCMAKE_BUILD_TYPE=RELEASE ..
 make
 ```
+
+# reference
+https://github.com/yotamorimoto/sc_ca/blob/main/hacking.pdf
