@@ -1,7 +1,6 @@
 # Hacking Cellular Automata
 
-![rulemix]
-(https://octodex.github.com/images/yaktocat.png)
+![rulemix](https://github.com/yotamorimoto/sc_ca/blob/main/rulemixpca2.png)
 
 ## installation
 
