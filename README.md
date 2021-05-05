@@ -1,6 +1,6 @@
 # Hacking Cellular Automata
 
-![rulemix](https://github.com/yotamorimoto/sc_ca/blob/main/rulemixpca2.png)
+<img src="https://github.com/yotamorimoto/sc_ca/blob/main/rulemixpca2.png" alt="logo" width="200"/>
 
 ## installation
 
