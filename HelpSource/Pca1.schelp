@@ -27,7 +27,7 @@ EXAMPLES::
 code::
 
 // single cell alive
-p = Pca1(Array.fill(300, {|i| if (i==150, {1}, {0})  }), 90, inf);
+p = Pca1(Array.fill(300, {|i| if(i==150, {1}, {0}) }), 90, inf);
 p.plot(500);// 500 generations
 
 // random initial cell
@@ -35,11 +35,11 @@ p = Pca1(Array.fill(300, { 2.rand }), 90, inf);
 p.plot(500);
 
 // different rule
-p = Pca1(Array.fill(300, {|i| if (i==150, {1}, {0})  }), 110, inf);
+p = Pca1(Array.fill(300, {|i| if(i==150, {1}, {0}) }), 110, inf);
 p.plot(500);
 
 // mixing rule!
-p = Pca1(Array.fill(300, {|i| if (i==150, {1}, {0})  }), Pseq([Pn(90, 10), Pn(110, 3)], inf), inf);
+p = Pca1(Array.fill(300, {|i| if(i==150, {1}, {0}) }), Pseq([Pn(90, 10), Pn(110, 3)], inf), inf);
 p.plot(500);
 
 // another mix

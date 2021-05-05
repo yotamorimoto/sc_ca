@@ -62,8 +62,8 @@ Pca2 : Pca {
 
 + Pca {
 	*r1 {
-		//some rules of ca1
-		//Original, Mirrored, Complemental, Mirrored-Complemental
+		// some rules i studied
+		// Original, Mirrored, Complemental, Mirrored-Complemental
 		^"
 		triangle1 -> [18, 146] // amphirical
 		triangle2 -> [26, 82, 154, 210]
@@ -84,13 +84,12 @@ Pca2 : Pca {
 		straight 4, 12, 13, 36";
 	}
 	*r2 {
-		//some rules of ca2
-		//reference, Mirek's MJCell
-		//http://psoup.math.wisc.edu/mcell/mjcell/mjcell.html
+		// from Mirek's MJCell
+		// http://psoup.math.wisc.edu/mcell/mjcell/mjcell.html
 		^[
-		"BC82271C", //bermuda triangle
-		"AD9C7232", //chaotic gliders
-		"89ED7106", //compound glider
+		"BC82271C", // bermuda triangle
+		"AD9C7232", // chaotic gliders
+		"89ED7106", // compound glider
 		"1C2A4798",
 		"5C6A4D98",
 		"5F0C9AD8",
@@ -119,11 +118,12 @@ Pca2 : Pca {
 		"8F0C1A48"
 		];
 	}
-	plot { |n=500|
+	plot { |n=500,skip=0|
 		var rct, cell, stream = this.asStream, strVal;
 		rct = Rect(0, 0, list.size, n);
 		win = Window("rule " ++ rule ++ " size " ++ list.size ++ "x" ++ n, rct, false);
 		win.view.background = Color.black;
+		skip.do { stream.next };
 		win.drawFunc = {
 			Pen.fillColor = Color.white;
 			n.do {|i|
