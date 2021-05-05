@@ -35,7 +35,7 @@ s.scope(2, 0, 64).style_(2);
 {
 	var sig;
 	sig = CA1.ar(
-		SampleRate.ir,
+		8000,
 		MouseY.kr(8, 256),
 		90,
 		MouseX.kr(0, 255),

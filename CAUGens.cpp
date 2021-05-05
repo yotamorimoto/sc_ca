@@ -11,7 +11,7 @@ struct CA0 : public Unit {
 	unsigned char rule2[32];
 	unsigned char cell[MAXWIDTH];
 	float counter;
-	float xn, xm1, xm2, xm3, frac, c0, c1, c2, c3;
+	float xn;
 };
 struct CA1 : public CA0 {};
 struct CA2 : public CA0 {};
@@ -37,7 +37,7 @@ float CA1_evolve(CA1 *unit, unsigned char smpwd)
 	for (int i=0; i<smpwd; i++) {
 		unit->cell[i] = unit->rule[
 			tmp[sc_wrap(i-1, 0, MAXWIDTH-1)] * 4 +
-			tmp[i]				  * 2 +
+			tmp[i] * 2 +
 			tmp[sc_wrap(i+1, 0, MAXWIDTH-1)]
 		];
 		div += i;
@@ -117,7 +117,7 @@ float CA2_evolve(CA2 *unit, unsigned char smpwd)
 		unit->cell[i] = unit->rule2[
 			tmp[sc_wrap(i-2, 0, MAXWIDTH-1)]		* 16 +
 			tmp[sc_wrap(i-1, 0, MAXWIDTH-1)]		*  8 +
-			tmp[i]									*  4 +
+			tmp[i]															*  4 +
 			tmp[sc_wrap(i+1, 0, MAXWIDTH-1)]		*  2 +
 			tmp[sc_wrap(i+2, 0, MAXWIDTH-1)]
 		];

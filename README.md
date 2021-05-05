@@ -1,4 +1,4 @@
-#installation
+# installation
 
 1. in SuperCollider run:
 
@@ -13,7 +13,7 @@ if(File.exists(Platform.userExtensionDir).not, {File.mkdir(Platform.userExtensio
 4. recompile class library
 
 
-#build from source
+# build from source
 ```
 mkdir build
 cd build
