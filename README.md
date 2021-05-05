@@ -1,4 +1,9 @@
-# installation
+# Hacking Cellular Automata
+
+![rulemix]
+(https://octodex.github.com/images/yaktocat.png)
+
+## installation
 
 1. in SuperCollider run:
 
@@ -13,7 +18,7 @@ if(File.exists(Platform.userExtensionDir).not, {File.mkdir(Platform.userExtensio
 4. recompile class library
 
 
-# build from source
+## build from source
 ```
 mkdir build
 cd build
