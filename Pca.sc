@@ -118,18 +118,18 @@ Pca2 : Pca {
 		"8F0C1A48"
 		];
 	}
-	plot { |n=500,skip=0|
+	plot { |n=500,skip=0,size=1|
 		var rct, cell, stream = this.asStream, strVal;
-		rct = Rect(0, 0, list.size, n);
+		rct = Rect(0, 0, list.size*size, n*size);
 		win = Window("rule " ++ rule ++ " size " ++ list.size ++ "x" ++ n, rct, false);
 		win.view.background = Color.black;
 		skip.do { stream.next };
 		win.drawFunc = {
 			Pen.fillColor = Color.white;
-			n.do {|i|
+			n.do { |i|
 				strVal = stream.next;
-				strVal.do {|item,j|
-					if (item == 1, { Pen.fillRect(Rect(j, i, 1, 1)) });
+				strVal.do { |item,j|
+					if (item == 1, { Pen.fillRect(Rect(j*size, i*size, size, size)) });
 				};
 			};
 

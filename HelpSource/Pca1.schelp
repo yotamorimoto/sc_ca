@@ -43,7 +43,7 @@ p = Pca1(Array.fill(300, {|i| if(i==150, {1}, {0}) }), Pseq([Pn(90, 10), Pn(110,
 p.plot(500);
 
 // another mix
-p = Pca1(Array.fill(300, {|i| if (i==150, {1}, {0})  }), Pseq([Pn(54, 50), Pn(18, 30)], inf), inf);
-p.plot(500);
+// run a couple of times... see some nice knitting
+p = Pca1(Array.fill(500, { |i| 2.rand }), Pbrown(0,255,5).stutter(Pbrown(1,80,4))).plot;
 
 ::
