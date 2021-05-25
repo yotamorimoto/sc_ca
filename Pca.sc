@@ -136,5 +136,6 @@ Pca2 : Pca {
 		};
 		win.front;
 		CmdPeriod.doOnce { win.close };
+		^win
 	}
 }

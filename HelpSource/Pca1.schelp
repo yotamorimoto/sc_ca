@@ -44,6 +44,10 @@ p.plot(500);
 
 // another mix
 // run a couple of times... see some nice knitting
-p = Pca1(Array.fill(500, { |i| 2.rand }), Pbrown(0,255,5).stutter(Pbrown(1,80,4))).plot;
+w = Pca1(Array.fill(480, { |i| 2.rand }), Pbrown(0,255,5).stutter(Pbrown(1,80,4))).plot(800);
 
+// save
+i = Image.fromWindow(w);
+i.write("~/Desktop/test.png".standardizePath);
+i.free;
 ::
