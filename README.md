@@ -10,7 +10,9 @@
 if(File.exists(Platform.userExtensionDir).not, {File.mkdir(Platform.userExtensionDir)});
 ```
 2. open folder
-```Platform.userExtensionDir.openOS;```
+```
+Platform.userExtensionDir.openOS;
+```
 
 3. place the downloaded folder/files there
 
